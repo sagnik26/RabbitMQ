@@ -1,6 +1,6 @@
 import { connect } from "amqplib";
 
-async function sendmail(params) {
+async function sendmail() {
   try {
     const connection = await connect("amqp://localhost:5672");
     const channel = await connection.createChannel();
@@ -30,4 +30,4 @@ async function sendmail(params) {
   }
 }
 
-sendmail("TEST");
+sendmail();
